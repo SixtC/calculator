@@ -52,13 +52,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Trivy
-        uses: aquasecurity/setup-trivy@3fb12ec
+        uses: aquasecurity/setup-trivy@3fb12ec12f41e471780db15c232d5dd185dcb514
         with:
           version: v0.69.3
           cache: true
 
       - name: Run Trivy vulnerability scanner in filesystem mode
-        uses: aquasecurity/trivy-action@57a97c7
+        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
         with:
           scan-type: fs
           scan-ref: .
